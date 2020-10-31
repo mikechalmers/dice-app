@@ -1,5 +1,24 @@
 .RollDice-dice {
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 50vh;
+}
+.RollDice button {
+    padding: 0.5em;
+    margin: 0.5em;
+    height: 3em;
+    width: 12em;
+    font-family: 'HeroQuest';
+    font-size: 2em;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(31, 31, 31);
+}
+
+.RollDice button:hover {
+    background-color: darkred;
+    cursor: pointer;
 }

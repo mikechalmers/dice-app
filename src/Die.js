@@ -6,7 +6,7 @@ class Die extends Component{
         let dieClass = "fas fa-dice-" + this.props.roll; 
         return(
             <div className="Die">
-                <i className={dieClass}></i>
+                <i className={`${dieClass} ${ this.props.rolling ? 'roll-shake' : ''}`}></i>
             </div>
         );
     }
