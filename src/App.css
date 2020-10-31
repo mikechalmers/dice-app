@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'HeroQuest';
+  src: local('HeroQuest'), url(./fonts/HeroQuest.ttf);
+}
+
 .App {
   text-align: center;
+}
+
+h1 {
+  font-family: HeroQuest;
+  font-size: 4em;
+  color: rgb(255, 230, 0);
+  text-shadow: 0px 0px 8px rgba(31, 31, 31, 1);
 }
