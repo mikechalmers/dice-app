@@ -3,9 +3,10 @@ import './Die.css';
 
 class Die extends Component{
     render(){
+        let dieClass = "fas fa-dice-" + this.props.roll; 
         return(
             <div className="Die">
-                <i class="fas fa-dice-one"></i>
+                <i className={dieClass}></i>
             </div>
         );
     }

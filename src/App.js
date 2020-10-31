@@ -1,4 +1,3 @@
-import Die from './Die';
 import RollDice from './RollDice';
 import './App.css';
 

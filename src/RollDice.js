@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import Die from './Die';
 
 class RollDice extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+
+        };
+    }
     render(){
         return(
             <div>
-                <Die roll={this.state.roll1} />
-                <Die roll={this.state.roll2} />
+                <Die roll="one" />
+                <Die roll="two" />
                 <button>Roll ya dice</button>
             </div>
         );
