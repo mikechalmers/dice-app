@@ -1,15 +1,11 @@
-.RollDice-dice {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 50vh;
+.dice-shaker {
+    margin: 0.5em;
 }
 .RollDice button {
     padding: 0.5em;
     margin: 0.5em;
     height: 3em;
-    width: 12em;
+    width: 250px;
     font-family: 'HeroQuest';
     font-size: 2em;
     border: 0px;

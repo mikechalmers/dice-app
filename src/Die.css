@@ -1,6 +1,17 @@
-.Die i {
+/* .Die i {
     font-size: 20vh;
     color: rgb(31, 31, 31);
+} */
+
+.Die {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    padding: 15px;
+}
+
+.Die-image {
+    width: 100%;
+    height: auto;
 }
 
 .roll-shake {
@@ -10,18 +21,18 @@
 
 @keyframes wobble {
     10%, 90% {
-      transform: translate3d(-1px, 0, 0) rotate(-2deg);
+      transform: translate3d(-2px, 0, 0) rotate(-4deg);
     }
     
     20%, 80% {
-      transform: translate3d(2px, 0, 0) rotate(2deg);
+      transform: translate3d(4px, 0, 0) rotate(4deg);
     }
     
     30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0) rotate(-4deg);
+      transform: translate3d(-8px, 0, 0) rotate(-8deg);
     }
   
     40%, 60% {
-      transform: translate3d(4px, 0, 0) rotate(4deg);
+      transform: translate3d(8px, 0, 0) rotate(8deg);
     }
 }

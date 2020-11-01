@@ -76,8 +76,10 @@ class RollDice extends Component{
 
         return(
             <div className="RollDice">
-                <div className="RollDice-dice">
-                    { diceArray }
+                <div className="container">
+                    <div className="row justify-content-center">
+                        { diceArray }
+                    </div>
                 </div>
                 <button onClick={this.rollEm} disabled={this.state.rolling}>
                     { this.state.rolling ? '~ rOlLiNg ~' : 'Roll' }
