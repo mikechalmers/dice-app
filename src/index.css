@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(48, 48, 48);
+  background-image: url("./images/floortiles.png");
+  background-repeat: repeat;
 }
 
 code {

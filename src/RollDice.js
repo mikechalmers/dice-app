@@ -77,18 +77,24 @@ class RollDice extends Component{
         return(
             <div className="RollDice">
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row my-5 justify-content-center">
                         { diceArray }
                     </div>
                 </div>
-                <button onClick={this.rollEm} disabled={this.state.rolling}>
-                    { this.state.rolling ? '~ rOlLiNg ~' : 'Roll' }
-                </button>
                 <button onClick={this.addEm}>
-                    Add
+                    <span className="d-none d-md-inline-block mx-5">Add</span>
+                    <span className="d-inline-block d-md-none">+</span>
                 </button>
+
+                <button className="roll-button" onClick={this.rollEm} disabled={this.state.rolling}>
+                    
+                    <span className="d-none d-md-inline-block mx-5">{ this.state.rolling ? '~ rOlLiNg ~' : 'Roll' }</span>
+                    <span className="d-inline-block d-md-none">Roll</span>
+                </button>
+
                 <button onClick={this.removeEm}>
-                    Remove
+                    <span className="d-none d-md-inline-block mx-5">Remove</span>
+                    <span className="d-inline-block d-md-none">-</span>
                 </button>
             </div>
         );

@@ -9,8 +9,16 @@
 
 h1 {
   font-family: HeroQuest;
-  font-size: 3.6em;
-  color: rgb(255, 230, 0);
+  font-size: 3em;
+  color: rgb(255, 217, 0);
   text-shadow: -2px -2px 0 darkred, 2px -2px 0 darkred, -2px 2px 0 darkred, 2px 2px 0 darkred, 0px 0px 10px rgba(31, 31, 31, 1);
   margin: 0;
+  letter-spacing: -4px;
+}
+
+.hq_logo {
+  max-width: 90%;
+  width: 400px;
+  position: relative;
+  top: 25px
 }
