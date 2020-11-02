@@ -86,7 +86,7 @@ class RollDice extends Component{
         return(
             <div className="RollDice">
                 <div className="container">
-                    <div className="row my-md-5 my-2 justify-content-center">
+                    <div className="row my-md-5 justify-content-center">
                         { diceArray }
                     </div>
 
@@ -97,7 +97,7 @@ class RollDice extends Component{
                                 <span className="d-inline-block d-md-none">Roll</span>
                             </button>
                             <button className="px-4" onClick={this.diceSwap}>
-                                <span className="d-none d-md-inline-block">{ this.state.numDice ? <img src="/images/Shield.png" className="monster" alt="Monster Shield" /> : '123' }</span>
+                                <span className="d-none d-md-inline-block">{ this.state.numDice ? 'HeroQuest Dice' : 'Numbered Dice' }</span>
                                 <span className="d-inline-block d-md-none">{ this.state.numDice ? <img src="/images/Shield.png" className="monster" alt="Monster Shield" /> : '123' }</span>
                             </button>
                         </div>
@@ -105,11 +105,11 @@ class RollDice extends Component{
                         <div className="col-12">
                             <button onClick={this.addEm}>
                                 <span className="d-none d-md-inline-block mx-4">Add</span>
-                                <span className="d-inline-block d-md-none mx-3">+</span>
+                                <span className="d-inline-block d-md-none mx-3 symbols">+</span>
                             </button>
                             <button onClick={this.removeEm}>
                                 <span className="d-none d-md-inline-block mx-4">Remove</span>
-                                <span className="d-inline-block d-md-none mx-3">-</span>
+                                <span className="d-inline-block d-md-none mx-3 symbols">-</span>
                             </button>
                         </div>
                     </div>

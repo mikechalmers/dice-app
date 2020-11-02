@@ -4,18 +4,22 @@
 .RollDice button {
     padding: 0.5em;
     margin: 0.5em;
-    height: 3em;
     font-family: 'HeroQuest';
     font-size: 2em;
     border: 0px;
     border-radius: 10px;
     color: white;
     background-color: rgb(31, 26, 23);
+    line-height: 1em;
 }
 
 .RollDice button:hover {
     background-color: darkred;
     cursor: pointer;
+}
+.symbols {
+    position: relative;
+    top: -5px;
 }
 
 .rolling {
@@ -25,6 +29,6 @@
 }
 
 .monster {
-    height: 1.3em;
+    height: 0.9em;
     width: auto;
 }

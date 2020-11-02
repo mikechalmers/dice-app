@@ -12,8 +12,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src="/images/hq_logo.png" alt="HeroQuest Logo" className="hq_logo" />
-        <h1>Dice Roll</h1>
+        <header>
+          <img src="/images/hq_logo.png" alt="HeroQuest Logo" className="hq_logo" />
+          <h1>Dice Roll</h1>
+        </header>
         <RollDice dice={ this.state.dice } />
       </div>
     );
