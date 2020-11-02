@@ -9,7 +9,7 @@ class RollDice extends Component{
     constructor(props){
         super(props);
         this.state = {
-            roll: "six",
+            roll: "two",
             result1: 6,
             result2: 6,
             result3: 6,
@@ -17,7 +17,8 @@ class RollDice extends Component{
             result5: 6,
             result6: 6,
             numberOfDice: 2,
-            rolling: false
+            rolling: false,
+            numDice: false
         };
     }
     rollEm = (e) => {
@@ -62,6 +63,14 @@ class RollDice extends Component{
         }
         
     }
+    diceSwap = (e) => {
+        if(this.state.numDice) {
+            this.setState({ numDice: false});
+        } else {
+            this.setState({ numDice: true});
+        }
+        
+    }
     render(){
         
         let diceArray = [];
@@ -70,7 +79,7 @@ class RollDice extends Component{
         for(let i = 0; i < this.state.numberOfDice; i++){
             const randomResult = results[i];
             diceArray.push(
-                <Die result={randomResult} rolling={this.state.rolling} />
+                <Die result={randomResult} rolling={this.state.rolling} numDice={this.state.numDice} roll={this.state.roll} />
             )
         }
 
@@ -80,22 +89,31 @@ class RollDice extends Component{
                     <div className="row my-md-5 my-2 justify-content-center">
                         { diceArray }
                     </div>
+
+                    <div className="row justify-content-center">
+                        <div className="col-12 ">
+                            <button className="px-4" onClick={this.rollEm} disabled={this.state.rolling}>
+                                <span className={`d-none d-md-inline-block ${ this.state.rolling && 'rolling' }`}>{ this.state.rolling ? '~ rOlLiNg ~' : 'Roll' }</span>
+                                <span className="d-inline-block d-md-none">Roll</span>
+                            </button>
+                            <button className="px-4" onClick={this.diceSwap}>
+                                <span className="d-none d-md-inline-block">{ this.state.numDice ? <img src="/images/Shield.png" className="monster" alt="Monster Shield" /> : '123' }</span>
+                                <span className="d-inline-block d-md-none">{ this.state.numDice ? <img src="/images/Shield.png" className="monster" alt="Monster Shield" /> : '123' }</span>
+                            </button>
+                        </div>
+
+                        <div className="col-12">
+                            <button onClick={this.addEm}>
+                                <span className="d-none d-md-inline-block mx-4">Add</span>
+                                <span className="d-inline-block d-md-none mx-3">+</span>
+                            </button>
+                            <button onClick={this.removeEm}>
+                                <span className="d-none d-md-inline-block mx-4">Remove</span>
+                                <span className="d-inline-block d-md-none mx-3">-</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <button onClick={this.addEm}>
-                    <span className="d-none d-md-inline-block mx-5">Add</span>
-                    <span className="d-inline-block d-md-none">+</span>
-                </button>
-
-                <button className="roll-button" onClick={this.rollEm} disabled={this.state.rolling}>
-                    
-                    <span className="d-none d-md-inline-block mx-5">{ this.state.rolling ? '~ rOlLiNg ~' : 'Roll' }</span>
-                    <span className="d-inline-block d-md-none">Roll</span>
-                </button>
-
-                <button onClick={this.removeEm}>
-                    <span className="d-none d-md-inline-block mx-5">Remove</span>
-                    <span className="d-inline-block d-md-none">-</span>
-                </button>
             </div>
         );
     }

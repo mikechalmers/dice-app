@@ -10,10 +10,21 @@
     border: 0px;
     border-radius: 10px;
     color: white;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(31, 26, 23);
 }
 
 .RollDice button:hover {
     background-color: darkred;
     cursor: pointer;
+}
+
+.rolling {
+    font-size: 0.5em;
+    position: relative;
+    top: -0.4em;
+}
+
+.monster {
+    height: 1.3em;
+    width: auto;
 }
