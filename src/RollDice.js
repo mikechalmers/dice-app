@@ -77,7 +77,7 @@ class RollDice extends Component{
         return(
             <div className="RollDice">
                 <div className="container">
-                    <div className="row my-5 justify-content-center">
+                    <div className="row my-5 my-sm-2 justify-content-center">
                         { diceArray }
                     </div>
                 </div>
